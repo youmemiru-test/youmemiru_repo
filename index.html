@@ -8,22 +8,23 @@
         <!-- slick用のcssの読み込みここまで -->
     </head>
     <body>
-<div class="slider">
-<div class="image"><img src="image/01.png"></div>
-<div class="image"><img src="image/02.png"></div>
-<div class="image"><img src="image/03.png"></div>
- </div>
+<ul class="slide-items">
+   <li><img src="image/01.png" alt=""></li>
+   <li><img src="image/02.png" alt=""></li>
+   <li><img src="image/03.png" alt=""></li>
+ </ul>
     <!-- jqueryの読み込み -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
  <script src="main.js"></script>
       <!-- slick動かす命令ここから -->
     <script> 
-  $('.slider').slick({
-    autoplay:true,
-    arrows:true,
-  }); 
-</script>
+$(".slide-items").slick({
+  autoplay:true,
+  slidesToShow:3,
+  infinite:true,
+  slidesToScroll:1,
+});
     <!-- slick動かす命令ここまで -->
     </body>
 </html>
